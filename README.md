@@ -17,5 +17,12 @@
   DoConnect BackEnd- http://localhost:8081 <br />
   DoConnect ChatServices- http://localhost:8082 <br />
   
- # Steps To Execute :
+ # Installations :
+  1. Install JAVA JDK
+  2. Install MYSQL SERVER & WORKBENCH
+  3. Install VS CODE
+  4. Install NodeJs
+  5. Install Eclipse
+  6. Install Spring Tool Suite
+ 
  
