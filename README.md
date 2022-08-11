@@ -1,4 +1,4 @@
-# <h1> DoConnect_JavaFullStack <\h1>
+# <h1> DoConnect_JavaFullStack </h1>
  Wipro Capstone Project G3
  
  # Team Details: 
