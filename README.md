@@ -16,8 +16,7 @@
   2. Install MYSQL SERVER & WORKBENCH
   3. Install VS CODE
   4. Install NodeJs (Set NodeJs Path to Environment Variable)
-  5. Install Eclipse
-  6. Install Spring Tool Suite
+  5. Install Eclipse or Spring Tool Suite
   
 # SQL SetUp
  1. CREATE DATABASE DoconnectDb
