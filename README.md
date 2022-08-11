@@ -16,3 +16,5 @@
   DoConnect UI- http://localhost:4200 <br />
   DoConnect BackEnd- http://localhost:8081 <br />
   DoConnect ChatServices- http://localhost:8082 <br />
+  
+ # Complete SetUp To Run This JavaFullStack Project
