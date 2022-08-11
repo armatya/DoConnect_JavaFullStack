@@ -12,6 +12,6 @@
  # GitHub Link: 
  
  # Links: 
-  DoConnect UI- http://localhost:4200
-  DoConnect BackEnd- http://localhost:8081
-  DoConnect ChatServices- http://localhost:8082
+  DoConnect UI- http://localhost:4200 <br />
+  DoConnect BackEnd- http://localhost:8081 <br />
+  DoConnect ChatServices- http://localhost:8082 <br />
