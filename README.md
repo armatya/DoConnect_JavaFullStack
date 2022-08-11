@@ -16,7 +16,7 @@
   2. Install MYSQL SERVER & WORKBENCH
   3. Install VS CODE
   4. Install NodeJs (Set NodeJs Path to Environment Variable)
-  5. Install Eclipse or Spring Tool Suite
+  5. Install Spring Tool Suite or configure Spring Tool Suite in Eclipse
   
 # SQL SetUp
  1. CREATE DATABASE DoconnectDb
@@ -31,7 +31,6 @@
 1. Configure Lombok
 2. Configure Maven
 3. Run as SpringBoot Application
-4. Create DoconnectDb and DoConnectChatDb in MySql server.
 
 # Links: 
   1. DoConnect UI- http://localhost:4200 
