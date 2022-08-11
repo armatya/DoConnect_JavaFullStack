@@ -2,21 +2,15 @@
  Wipro Capstone Project G3
  
  # Team Details: 
- 
- 1. Naazneen Ahmed  <br />
- 2. Subham Dey  <br />
- 3. Armatya Kumar  <br />
- 4. Yagesh M K  <br/>
- 5. Deepika Sowmya Kunche  <br />
+ 1. Naazneen Ahmed  
+ 2. Subham Dey  
+ 3. Armatya Kumar
+ 4. Yagesh M K  
+ 5. Deepika Sowmya Kunche  
  
  # GitHub Link: 
  https://github.com/armatya/DoConnect_JavaFullStack
  
- # Links: 
-  DoConnect UI- http://localhost:4200 <br />
-  DoConnect BackEnd- http://localhost:8081 <br />
-  DoConnect ChatServices- http://localhost:8082 <br />
-  
  # Installations :
   1. Install JAVA JDK (Set Java Path to Environment Variable)
   2. Install MYSQL SERVER & WORKBENCH
@@ -34,6 +28,12 @@
 1. Configure Lombok
 2. Configure Maven
 3. Run as SpringBoot Application
+
+# Links: 
+  DoConnect UI- http://localhost:4200 <
+  DoConnect BackEnd- http://localhost:8081 <br />
+  DoConnect ChatServices- http://localhost:8082 <br />
+  
 
 
  
