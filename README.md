@@ -2,8 +2,8 @@
  Wipro Capstone Project G3
  # Team Details: 
  
- Naazneen Ahmed 
- Subham Dey
- Armatya Kumar
- Yagesh M K
- Deepika Sowmya Kunche
+ 1.Naazneen Ahmed 
+ 2.Subham Dey
+ 3.Armatya Kumar
+ 4.Yagesh M K
+ 5.Deepika Sowmya Kunche
