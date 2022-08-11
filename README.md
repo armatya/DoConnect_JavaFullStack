@@ -30,9 +30,9 @@
 3. Run as SpringBoot Application
 
 # Links: 
-  1. DoConnect UI- http://localhost:4200 <
-  2. DoConnect BackEnd- http://localhost:8081 <br />
-  3. DoConnect ChatServices- http://localhost:8082 <br />
+  1. DoConnect UI- http://localhost:4200 
+  2. DoConnect BackEnd- http://localhost:8081 
+  3. DoConnect ChatServices- http://localhost:8082 
   
 
 
