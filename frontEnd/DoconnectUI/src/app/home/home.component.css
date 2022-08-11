@@ -1,0 +1,21 @@
+.home-container{
+    background-image: url("../../assets/wall.jpg");
+    height: 85%;
+    width: 100%;
+    background-size:cover;
+}
+
+.home-message-p{
+    color:blanchedalmond;
+    text-align: center;
+    font-style: italic;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 500%;
+    animation: fadeIn 7s;
+    text-shadow: 5px 5px 10px burlywood;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }

@@ -1,0 +1,22 @@
+<h3 style="text-align: center">Let's Connect {{ user.name }}</h3>
+
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+  aria-expanded="false" aria-controls="collapseOne" (click)="getMessage()">
+  <div class="join">
+    Join the Chat
+  </div>
+</button>
+<div class="container my-2" *ngFor="let message of messages">
+  <mat-card class="card">
+    <span class="user">{{ message.fromUser }}</span>
+    <div class="text_message">{{ message.message }}</div>
+  </mat-card>
+</div>
+
+<div class="container d-flex flex-row">
+  <input style="margin-right: 5px;" type="search" class="form-control" placeholder="Enter message" #search
+    (keyup.enter)="sendMessage(search.value)" aria-label="Search" aria-describedby="addon-wrapping" />
+  <button class="btn me-1 btn-outline-primary" (click)="getMessage()">
+    Refresh
+  </button>
+</div>

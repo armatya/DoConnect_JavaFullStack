@@ -1,0 +1,65 @@
+<div class="body">
+  <div class="container my-4">
+    <h3 style="text-align: center">Welcome {{ user.name }}</h3>
+  </div>
+  <div class="body">
+    <div class="askQuestion">
+      <form #askquestion="ngForm" (ngSubmit)="askQuestion(askquestion.value)">
+        <div>
+          <h3>Ask Your Question</h3>
+        </div>
+        <div class="padding">
+          <select ngModel name="topic" class="form-select" aria-label="Default select example" required>
+            <option selected disabled>Choose Topic</option>
+            <option value="Geography">Geography</option>
+            <option value="History">History</option>
+            <option value="Science">Science</option>
+            <option value="Others">Others</option>
+          </select>
+        </div>
+        <div class="mb-3 padding">
+          <label for="exampleFormControlTextarea1" class="form-label">Post Your Question ?</label>
+          <textarea ngModel name="question" class="form-control" id="exampleFormControlTextarea1" rows="5"
+            required></textarea>
+        </div>
+        <div >
+          <!-- maxFileSize="61440" -->
+          <input type="file" accept="image/png, image/gif, image/jpeg" (change)="onFileChanged($event)" />
+          <p style="color: red;"><strong>*note : </strong>Please Upload Image of size less than 60KB</p>
+        </div>
+        <div class="askQuestionButton">
+          <button type="submit" class="btn btn-outline-primary">Submit</button>
+        </div>
+      </form>
+      <br />
+
+      <div class="container row">
+        <div class="col-md-12">
+          <div *ngIf="message">{{ message }}</div>
+        </div>
+      </div>
+      <br />
+
+      <div class="container row">
+        <div class="col-md-6">
+          <input type="text" class="form-control" id="name" placeholder="image name" [(ngModel)]="imageName"
+            name="name" />
+        </div>
+        <div class="col-md-6">
+          <button class="btn btn-outline-info" type="button" (click)="getImage()">
+            Get Image
+          </button>
+        </div>
+      </div>
+
+      <div class="container row">
+        <div class="col-md-12 my-2">
+          <div *ngIf="retrievedImage">
+            <img [src]="retrievedImage" />
+          </div>
+        </div>
+      </div>
+      <br />
+    </div>
+  </div>
+</div>

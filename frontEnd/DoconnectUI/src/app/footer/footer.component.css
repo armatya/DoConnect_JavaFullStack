@@ -1,0 +1,19 @@
+footer {
+    position: relative;
+    color: burlywood; 
+    font-weight: bold;
+    font-style: italic;
+    background-color: black;
+}
+h5{
+    color: rgb(235, 195, 144); 
+}
+a{
+    text-decoration: none;
+}
+.copy{
+    cursor: pointer;
+}
+.row{
+    padding: 5px;
+}

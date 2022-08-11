@@ -1,0 +1,27 @@
+.card{
+  border: 0;
+}
+.user{
+  padding-left: 16px;
+  font-size: 14px;
+  color:darkmagenta;
+  font-weight: 400;
+}
+.text_message{
+  background-color: rgb(44, 39, 77);
+  border-radius: 25px;
+  color: beige;
+  padding: 10px;
+  font-weight: 500;
+}
+.accordion-button{
+  justify-content: center;
+}
+.container{
+  bottom: 0;
+}
+.join{
+  padding: 0 6vw;
+  font-size: 18px;
+  font-weight: 500;
+}

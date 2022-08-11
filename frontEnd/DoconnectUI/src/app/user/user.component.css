@@ -1,0 +1,27 @@
+#btn-chat {
+	border-radius: 50%;
+	background-color: rgb(190, 68, 68);
+	color: aliceblue;
+	position: relative;
+	width: 60px;
+	height: 60px;
+	bottom: 20px;
+	right: -5px;
+	background-color: #0C9;
+	color: #FFF;
+	border-radius: 50px;
+	text-align: center;
+	box-shadow: 2px 2px 3px #999;
+	float: right;
+}
+.body{
+	margin-top: -24px;
+	padding-top: 24px;
+	width: 100vw;
+	background-color: azure;
+	padding-bottom: 50px;
+}
+.offcanvas-end{
+	height: 80%;
+	border-radius: 25px;
+}

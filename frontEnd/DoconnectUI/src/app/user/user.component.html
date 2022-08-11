@@ -1,0 +1,42 @@
+<div class="body">
+  <div class="container my-4 d-flex flex-row float-right">
+    <span class="container me-5">
+      <h4 style="text-align: right">Welcome {{ user.name }}</h4>
+    </span>
+    <span class="container">
+      <button class="btn me-2 btn-outline-danger float-end" (click)="userLogout(user.id)" type="button">
+        LogOut
+      </button>
+    </span>
+  </div>
+  <div class="container">
+    <div class="row">
+      <a class="col-2" routerLink="/ask-question" routerLinkActive="active" ariaCurrentWhenActive="page">
+        <button class="btn ml-15 btn-outline-primary" id="ask">Ask Question</button>
+      </a>
+      <div class="col-8"></div>
+      <div class="col-2">
+        <a routerLink="/edit-user" [queryParams]="user" queryParamsHandling=null routerLinkActive="active" ariaCurrentWhenActive="page">
+          <button class="btn ml-15 btn-outline-primary" id="ask">Edit your Profile</button>
+        </a>
+      </div>
+    </div>
+    <br />
+  </div>
+  <app-all-questions></app-all-questions>
+  <br />
+  <div class="container float-right">
+    <button class="btn btn-outline" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+      aria-controls="offcanvasRight" id="btn-chat">
+      <i class="fas fa-comment fa-2x"></i>
+    </button>
+  </div>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <app-chat></app-chat>
+    </div>
+  </div>
+</div>

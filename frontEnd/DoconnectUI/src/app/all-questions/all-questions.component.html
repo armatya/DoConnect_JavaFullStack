@@ -1,0 +1,48 @@
+<br />
+<nav class="navbar container navbar-light bg-light">
+  <div class="container-fluid">
+    <button (click)="getQuestions('All')" class="btn btn-outline-dark">
+      All
+    </button>
+    <button (click)="getQuestions('Geography')" class="btn btn-outline-dark">
+      Geography
+    </button>
+    <button (click)="getQuestions('History')" class="btn btn-outline-dark">
+      History
+    </button>
+    <button (click)="getQuestions('Science')" class="btn btn-outline-dark">
+      Science
+    </button>
+    <button (click)="getQuestions('Others')" class="btn btn-outline-dark">
+      Others
+    </button>
+  </div>
+</nav>
+<div class="container my-3">
+  <table class="table me-2">
+    <tr>
+      <th>Question</th>
+      <th>Posted By</th>
+      <th>Topic</th>
+      <th *ngIf="showImageColumn">Image</th>
+      <th>Get Answers</th>
+    </tr>
+
+    <tr *ngFor="let question of questions">
+      <td>{{ question.question }}</td>
+      <td class="middle">{{ question.user.name }}</td>
+      <td class="middle">{{ question.topic }}</td>
+      <td class="middle" *ngIf="showImageColumn">
+        <div class="showImage" *ngIf="question.showImage">
+          <img src="{{question.imageToShow}}">
+        </div>
+      </td>
+      <td class="middle">
+        <button class="btn my-2 btn-outline-success" id="{{ question.id }}"
+          (click)="sendQuestionToGetAnswer(question.id)">
+          Get Answers
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>

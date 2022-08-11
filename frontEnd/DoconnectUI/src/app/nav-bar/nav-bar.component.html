@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href=""><img class="logo" src="/assets/logo.png" alt="logo"></a>
+    <a class="navbar-brand" href=""><img class="logo_full" src="/assets/logo_full.png" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+      <div class="search-box">
+        <input type="text" #search class="search-input" placeholder="Start Looking For Something!"
+          (keyup.enter)="getValue(search.value)" aria-label="Search" aria-describedby="addon-wrapping">
+        <a class="search-btn" href="#">
+          <!-- Seach Icon -->
+          <i class="fas fa-search fa-lg"></i>
+        </a>
+      </div>
+      <div class="dropdown">
+        <button class="btn btn-secondary length" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa fa-list-ul fa-lg"></i>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a (click)="isSearched=false" class="dropdown-item" routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">
+            User Login</a></li>
+          <li (click)="isSearched=false" class="register"><a class="dropdown-item" routerLink="/register" routerLinkActive="active" ariaCurrentWhenActive="page"
+              role="button">Register</a></li>
+          <li (click)="isSearched=false" class="admin"><a class="dropdown-item" routerLink="/admin-login" routerLinkActive="active" ariaCurrentWhenActive="page">
+              Admin Login </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container" *ngIf="isSearched">
+  <table class="table table-striped">
+    <tr>
+      <th>Question</th>
+      <th>Posted By</th>
+      <th>Topic</th>
+      <th>Get Answer</th>
+    </tr>
+
+    <tr *ngFor="let question of questions">
+      <td>{{ question.question }}</td>
+      <td class="center">{{ question.user.name }}</td>
+      <td class="center">{{ question.topic }}</td>
+      <td class="center">
+        <button class="btn btn-outline-success" id="{{ question.id }}" (click)="sendQuestionToGetAnswer(question.id)">
+          Get Answers
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,131 @@
+<div class="body">
+  <div class="container my-3 d-flex flex-row mb-2">
+    <span class="container me-5">
+      <h3 style="text-align: center">Hello {{ admin.name }}</h3>
+    </span>
+    <span class="container" style="text-align: right">
+      <button class="btn me-2 btn-outline-success" (click)="addAdmin()" type="button">
+        Update Admin
+      </button>
+      <button class="btn me-2 btn-outline-danger" (click)="adminLogout(admin.id)" type="button">
+        LogOut
+      </button>
+    </span>
+  </div>
+
+  <div class="accordion" id="accordionPanelsStayOpenExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+        <button (click)="getUnApprovedQuestions()" class="accordion-button collapsed" type="button"
+          data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
+          aria-controls="panelsStayOpen-collapseOne">
+          Questions to be Approved
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+        aria-labelledby="panelsStayOpen-headingOne">
+        <div class="accordion-body">
+          <table class="table">
+            <tr class="table-success table-striped">
+              <th>Id</th>
+              <th>Question</th>
+              <th>Posted By</th>
+              <th>Topic</th>
+              <th>Approve</th>
+              <th>Reject</th>
+            </tr>
+
+            <tr class="table-success table-striped" *ngFor="let question of questions">
+              <td>{{ question.id }}</td>
+              <td>{{ question.question }}</td>
+              <td>{{ question.user.name }}</td>
+              <td>{{ question.topic }}</td>
+              <td>
+                <button class="btn btn-outline-success" id="{{ question }}" (click)="approveQuestion(question.id)">
+                  Approve
+                </button>
+              </td>
+              <td>
+                <button class="btn btn-outline-danger" id="{{ question }}" (click)="deleteQuestion(question.id)">
+                  Remove
+                </button>
+              </td>
+            </tr>
+            <tr *ngIf="blankQuestions">No Qestions to be approved</tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+        <button (click)="getUnApprovedAnswers()" class="accordion-button collapsed" type="button"
+          data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+          aria-controls="panelsStayOpen-collapseTwo">
+          Answers to be Approved
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+        aria-labelledby="panelsStayOpen-headingTwo">
+        <div class="accordion-body">
+          <table class="table table-success table-striped">
+            <tr>
+              <th>Id</th>
+              <th>Answer</th>
+              <th>Answer Given by</th>
+              <th>Approve</th>
+              <th>Reject</th>
+            </tr>
+
+            <tr *ngFor="let answer of answers">
+              <td>{{ answer.id }}</td>
+              <td>{{ answer.answer }}</td>
+              <td>{{ answer.answerUser.name }}</td>
+
+              <td>
+                <button class="btn btn-outline-success" id="{{ answer.id }}" (click)="approveAnswer(answer.id)">
+                  Approve
+                </button>
+              </td>
+              <td>
+                <button class="btn btn-outline-danger" id="{{ answer.id }}" (click)="deleteAnswer(answer.id)">
+                  Remove
+                </button>
+              </td>
+            </tr>
+            <tr *ngIf="blankAnswers">No Answers to be approved</tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+        <button (click)="getAllUsers()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+          aria-controls="panelsStayOpen-collapseThree">
+          Registered Users
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+        aria-labelledby="panelsStayOpen-headingThree">
+        <div class="accordion-body">
+          <table class="table table-striped table-hover">
+            <tr>
+              <th>Id</th>
+              <th>UserName</th>
+              <th>User Email</th>
+              <th>PhoneNumber</th>
+            </tr>
+
+            <tr *ngFor="let user of users">
+              <td>{{ user.id }}</td>
+              <td>{{ user.name }}</td>
+              <td>{{ user.email }}</td>
+              <td>{{ user.phoneNumber }}</td>
+            </tr>
+            <tr *ngIf="blankUsers">No Users to be Displayed</tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

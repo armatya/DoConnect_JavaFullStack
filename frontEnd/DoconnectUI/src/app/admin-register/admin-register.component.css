@@ -1,0 +1,36 @@
+.body{
+    background-color: cadetblue;
+    width: 100%;
+    height: 100%;
+    margin-top: -50px;
+    padding-top: 60px;
+}
+.register {
+    width: 30%;
+    margin: auto;
+    border: 1px solid rgb(188, 171, 171);
+    margin-top: 50px;
+    padding: 40px;
+    background-color: white;
+}
+
+h2 {
+    text-align: center;
+  /*   font-family: 'Courier New', Courier, monospace; */
+    font-weight: 500;
+    color: rgb(92, 92, 124);
+    margin-bottom: 30px;
+}
+
+.registerButton {
+    text-align: center;
+}
+
+Button:hover {
+    background-color: rgb(74, 74, 237);
+}
+
+p {
+    text-align: center;
+    margin: 15px 0 10px 0;
+}

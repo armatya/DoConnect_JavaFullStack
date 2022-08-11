@@ -1,0 +1,25 @@
+.accordion{
+    margin-top: 10px;
+    width: 90%;
+    margin: auto;
+}
+.body{
+    margin-top: -16px;
+    padding-top: 50px;
+    /* height: 100vh; */
+    background-color: cadetblue;
+    padding-bottom: 300px;
+}
+button{
+    border: 0;
+    box-shadow: 3px 3px #888888;
+}
+td,th{
+    margin: 3px;
+}
+.me-2{
+    background-color: aliceblue;
+}
+.me-2:hover{
+    background-color: rgb(42, 85, 42);
+}

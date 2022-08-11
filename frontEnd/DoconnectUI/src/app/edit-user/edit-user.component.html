@@ -1,0 +1,46 @@
+<div class="body">
+  <div class="register">
+    <form ngNativeValidate #userregister="ngForm" (ngSubmit)="userRegister(userregister.value)">
+      <label for="register" class="container">
+        <h2>Update your Details</h2>
+      </label><br />
+      <div class="row g-3">
+        <div class="row">
+          <div class="col row" style="margin-right: 3px;">
+            <input ngModel [(ngModel)]="fName" name="fName" type="text" class="form-control" placeholder="First name"
+              aria-label="First name" required />
+          </div>
+          <div class="col row">
+            <input ngModel [(ngModel)]="lName" name="lName" type="text" class="form-control" placeholder="Last name"
+              aria-label="Last name" required />
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="mb-3 row">
+        <input ngModel [(ngModel)]="email" disabled name="email" type="email" class="form-control col"
+          id="formGroupExampleInput" placeholder="Email" required />
+        <span class="col-1"></span>
+      </div>
+      <div class="mb-3 row">
+        <input ngModel #password_input [(ngModel)]="password" name="password" type="password" class="form-control col"
+          id="formGroupExampleInput2" placeholder="Password" required minlength="8" />
+        <a class="btn type-toggle col-1" (click)="toggleShow()">
+          <i *ngIf="!showPassword" class="fa fa-eye"></i>
+          <i *ngIf="showPassword" class="fa fa-eye-slash"></i>
+        </a>
+      </div>
+      <div class="mb-3 row">
+        <input ngModel [(ngModel)]="mNumber" name="mNumber" type="text" class="form-control col"
+          id="formGroupExampleInput3" placeholder=" Mobile Number" required maxlength="10" minlength="10" />
+        <span class="col-1"></span>
+      </div>
+      <div class="registerButton">
+        <button type="submit" class="btn btn-outline-primary me-2">
+          Update
+        </button>
+        <input class="btn btn-outline-primary" type="button" value="Reset" (click)="reset()" />
+      </div>
+    </form>
+  </div>
+</div>

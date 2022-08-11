@@ -1,0 +1,65 @@
+<div class="body">
+  <div class="login">
+    <form ngNativeValidate #userlogin="ngForm" (ngSubmit)="userLogin(userlogin.value)">
+      <div class="email">
+        <label for="login" class="container">
+          <h2>Login</h2>
+        </label><br />
+        <label for="exampleInputEmail1" class="form-label">Email </label>
+        <div class="row">
+          <input #prev_email ngModel name="email" type="email" class="form-control col" placeholder="abc@gmail.com"
+            id="exampleInputEmail1" aria-describedby="emailHelp" required />
+          <span class="col-1"></span>
+        </div>
+        <br>
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <div class="row">
+          <input #password_input ngModel name="password" type="password" class="form-control col"
+            id="exampleInputPassword1" required />
+          <a class="btn type-toggle col-1" (click)="toggleShow()">
+            <i *ngIf="!showPassword" class="fa fa-eye"></i>
+            <i *ngIf="showPassword" class="fa fa-eye-slash"></i>
+          </a>
+        </div>
+      </div>
+      <div class="loginButton">
+        <button type="submit" class="btn btn-outline-primary">Login</button>
+      </div>
+    </form>
+    <a routerLink="/register" routerLinkActive="active" ariaCurrentWhenActive="page">
+      <p>New to DoConnect? Register here.</p>
+    </a>
+    <a (click)="setEmail()" class="forgot_passowrd" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      <p>Forgot Password? Reset Password.</p>
+    </a>
+  </div>
+</div>
+
+<!-- Modal -->
+<div #modal class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Reset Password</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form ngNativeValidate #reset="ngForm" (ngSubmit)="resetPassword(reset.value)">
+          <label for="exampleInputEmail2" class="form-label">Enter Email ID</label>
+          <input #forget_mail ngModel name="forgetEmail" type="email" class="form-control" placeholder="abc@gmail.com"
+            id="exampleInputEmail2" aria-describedby="emailHelp" required />
+          <br>
+          <div class="registerButton">
+            <button type="submit" class="btn btn-outline-primary me-2">
+              Reset Password
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+.body{
+    padding-top: 50px;
+    background-color: lightsteelblue;;
+    /* width: 100vw; */
+    height: 100vh;
+}
+
+.register {
+    background-color: white;
+    width: 30%;
+    margin: auto;
+    border: 1px solid rgb(188, 171, 171);
+    padding: 40px;
+}
+
+h2 {
+    text-align: center;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-weight: 500;
+    color: rgb(92, 92, 124);
+    margin-bottom: 30px;
+}
+
+.registerButton{
+    text-align: center;
+}
+
+Button:hover {
+    background-color: rgb(74, 74, 237);
+}
+
+p {
+    text-align: center;
+    margin-bottom: 100px;
+}
