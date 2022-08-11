@@ -18,6 +18,10 @@
   4. Install NodeJs (Set NodeJs Path to Environment Variable)
   5. Install Eclipse
   6. Install Spring Tool Suite
+  
+# SQL SetUp
+ 1. CREATE DATABASE DoconnectDb
+ 2. CREATE DATABASE DoConnectChatDb
 
 # Commands to run UI Code :
  1. npm install -g @angular/cli
@@ -28,6 +32,7 @@
 1. Configure Lombok
 2. Configure Maven
 3. Run as SpringBoot Application
+4. Create DoconnectDb and DoConnectChatDb in MySql server.
 
 # Links: 
   1. DoConnect UI- http://localhost:4200 
